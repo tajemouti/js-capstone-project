@@ -40,4 +40,14 @@ ul img {
 
 footer {
   display: flex;
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
+  padding: 1% 15%;
+  background: rgb(219, 215, 215);
+}
+
+footer p {
+  font-size: 1.1em;
+  font-weight: 600;
 }
