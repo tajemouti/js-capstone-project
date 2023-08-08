@@ -3,8 +3,37 @@
   margin: 0;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-#header {
+header {
   display: flex;
+  justify-content: center;
+  background: rgb(219, 215, 215);
+  min-width: 100%;
+  padding: 1% 10%;
+  box-shadow: 0 0 10px 0;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  list-style: none;
+  font-size: 2em;
+  font-weight: 600;
+  color: black;
+}
+
+ul a {
+  font-size: 1em;
+  font-weight: 600;
+  color: black;
+  text-shadow: 1px 2px;
+}
+
+ul img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
 }
