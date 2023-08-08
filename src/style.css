@@ -37,3 +37,7 @@ ul img {
   height: 96px;
   border-radius: 50%;
 }
+
+footer {
+  display: flex;
+}
