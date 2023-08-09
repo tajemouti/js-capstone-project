@@ -1,13 +1,11 @@
-import getDetail from './getDetail';
+import getDetail from './getDetail.js';
 
 const modal = document.getElementById('modal');
 const closebtn = document.getElementById('close');
 const itemSection = document.getElementById('itemSection');
 
-const popupModal = async (id) => {
-  const data = await getDetail(`lookup.php?i=${id}`);
-  const result = data.meals;
-  displayItemDetail(result[0]);
+const closeModal = () => {
+  modal.style.display = 'none';
 };
 
 const displayItemDetail = (data) => {
@@ -28,12 +26,14 @@ const displayItemDetail = (data) => {
   closebtn.addEventListener('click', closeModal);
 };
 
-const closeModal = () => {
-  modal.style.display = 'none';
+const popupModal = async (id) => {
+  const data = await getDetail(`lookup.php?i=${id}`);
+  const result = data.meals;
+  displayItemDetail(result[0]);
 };
 
 window.onclick = (event) => {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = 'none';
   }
 };
