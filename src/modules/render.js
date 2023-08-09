@@ -1,9 +1,13 @@
+import popupModal from './popupModal.js';
+
 const API_KEY = '1';
 const API_BASE_URL = 'https://www.themealdb.com/api/json/v1';
 const mealListCont = document.getElementById('mealList');
 
 const fetchCategoryMeals = async (category) => {
-  const response = await fetch(`${API_BASE_URL}/${API_KEY}/filter.php?c=${category}`);
+  const response = await fetch(
+    `${API_BASE_URL}/${API_KEY}/filter.php?c=${category}`,
+  );
   const data = await response.json();
   return data.meals || [];
 };
@@ -24,6 +28,8 @@ const displayMeals = (meals) => {
     const commentsButton = document.createElement('button');
     commentsButton.textContent = 'Comments';
     commentsButton.classList.add('commentsBtn');
+
+    commentsButton.addEventListener('click', () => popupModal(meal.idMeal));
 
     mealElement.appendChild(mealImage);
     mealElement.appendChild(mealTitle);
