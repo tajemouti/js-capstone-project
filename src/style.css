@@ -38,6 +38,53 @@ ul img {
   border-radius: 50%;
 }
 
+main {
+  padding: 2% 7%;
+}
+
+#mealList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  width: 30%;
+  padding: 2% 2%;
+  margin-bottom: 3%;
+  border: 1px solid;
+  border-radius: 3%;
+}
+
+.meal img {
+  width: 100%;
+  border-radius: 3%;
+  transition: transform 0.3s;
+}
+
+.meal img:hover {
+  transform: scale(1.1);
+}
+
+.commentsBtn {
+  width: 100%;
+  height: 2em;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 3%;
+  background: rgb(240, 226, 208);
+  box-shadow: 0.3em 0.4em 0.2em;
+  transition: transform 0.2s;
+}
+
+.commentsBtn:focus {
+  transform: scale(0.95);
+}
+
 footer {
   display: flex;
   position: fixed;
