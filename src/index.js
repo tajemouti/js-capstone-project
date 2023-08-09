@@ -1,10 +1,19 @@
 import './style.css';
 import './logo.jpg';
-import { fetchSeafoodMeals, displayMeals } from './modules/render.js';
+import { fetchCategoryMeals, displayMeals } from './modules/render.js';
 
-const renderAPI = async () => {
-  const seafoodMeals = await fetchSeafoodMeals();
-  displayMeals(seafoodMeals);
+const headerLinks = document.querySelectorAll('header a');
+const renderCategory = async (category) => {
+  const categoryMeals = await fetchCategoryMeals(category);
+  displayMeals(categoryMeals);
 };
 
-renderAPI();
+headerLinks.forEach((link) => {
+  link.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const category = e.target.textContent;
+    await renderCategory(category);
+  });
+});
+
+renderCategory('Seafood');
