@@ -13,6 +13,9 @@ header {
   min-width: 100%;
   padding: 1% 10%;
   box-shadow: 0 0 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 ul {
@@ -39,7 +42,7 @@ ul img {
 }
 
 main {
-  padding: 2% 7%;
+  padding: 10% 7% 5% 7%;
 }
 
 #mealList {
@@ -87,8 +90,6 @@ main {
 
 footer {
   display: flex;
-  position: fixed;
-  bottom: 0;
   min-width: 100%;
   padding: 1% 15%;
   background: rgb(219, 215, 215);
