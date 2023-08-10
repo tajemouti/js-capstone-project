@@ -1,6 +1,7 @@
 import getDetail from './getDetail.js';
 import getComments from './getComments.js';
 import postComment from './postComment.js';
+import commentCounter from './commentCounter.js';
 
 const modal = document.getElementById('modal');
 const closebtn = document.getElementById('close');
@@ -26,7 +27,8 @@ const displayItemDetail = (id, data, comments) => {
     `;
 
   if (comments.length > 0) {
-    commentsHeading.innerHTML = `<p class='commentCountTitle'>Comments(${comments.length})</p>`;
+    const count = commentCounter(comments);
+    commentsHeading.innerHTML = `<p class='commentCountTitle'>Comments(${count})</p>`;
     commentSection.innerHTML = comments
       .map(
         (comment) => `
@@ -43,10 +45,12 @@ const displayItemDetail = (id, data, comments) => {
     const username = document.getElementById('username').value;
     const comment = document.getElementById('comment').value;
 
-    postComment(id, username, comment);
-
-    document.getElementById('username').value = '';
-    document.getElementById('comment').value = '';
+    if (username !== '' && comment !== '') {
+      postComment(id, username, comment);
+      document.getElementById('username').value = '';
+      document.getElementById('comment').value = '';
+      closeModal();
+    }
   });
 
   closebtn.addEventListener('click', closeModal);
