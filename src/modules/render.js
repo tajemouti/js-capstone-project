@@ -2,6 +2,9 @@ import popupModal from './popupModal.js';
 
 const API_KEY = '1';
 const API_BASE_URL = 'https://www.themealdb.com/api/json/v1';
+const APP_ID = 'U0rygR4lGVMwDPhnPl1g';
+const INVOLVEMENT_API_BASE_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+
 const mealListCont = document.getElementById('mealList');
 
 const fetchCategoryMeals = async (category) => {
