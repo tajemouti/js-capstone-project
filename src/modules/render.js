@@ -15,6 +15,13 @@ const fetchCategoryMeals = async (category) => {
   return data.meals || [];
 };
 
+const fetchLikes = async (mealName) => {
+  const response = await fetch(`${INVOLVEMENT_API_BASE_URL}/apps/${APP_ID}/likes`);
+  const data = await response.json();
+  const mealLikes = data.find((item) => item.item_id === mealName);
+  return mealLikes ? mealLikes.likes : 0;
+};
+
 const displayMeals = (meals) => {
   mealListCont.innerHTML = '';
   meals.forEach((meal) => {
