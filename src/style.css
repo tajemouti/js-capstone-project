@@ -152,6 +152,15 @@ footer p {
   padding: 1rem;
 }
 
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
 .commentBox {
   display: flex;
   flex-direction: column;
@@ -162,6 +171,26 @@ footer p {
 
 .p {
   width: 450px;
+}
+
+.commentCountTitle {
+  display: flex;
+  justify-content: center;
+  color: #443e3e;
+  font-size: large;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.commentName {
+  color: #443e3e;
+  font-size: large;
+  font-weight: bold;
+}
+
+.commentText {
+  font-size: medium;
+  color: #5a5858;
 }
 
 .date {
