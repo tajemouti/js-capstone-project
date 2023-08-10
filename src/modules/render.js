@@ -8,9 +8,7 @@ const INVOLVEMENT_API_BASE_URL = 'https://us-central1-involvement-api.cloudfunct
 const mealListCont = document.getElementById('mealList');
 
 const fetchCategoryMeals = async (category) => {
-  const response = await fetch(
-    `${API_BASE_URL}/${API_KEY}/filter.php?c=${category}`,
-  );
+  const response = await fetch(`${API_BASE_URL}/${API_KEY}/filter.php?c=${category}`);
   const data = await response.json();
   return data.meals || [];
 };
@@ -26,9 +24,25 @@ const updateLikesCount = (element, count) => {
   element.textContent = `${count} Likes`;
 };
 
-const displayMeals = (meals) => {
+const sendLike = async (mealName) => {
+  const requestBody = {
+    item_id: mealName,
+  };
+
+  const response = await fetch(`${INVOLVEMENT_API_BASE_URL}/apps/${APP_ID}/likes`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody),
+  });
+  return response.status === 201;
+};
+
+const displayMeals = async (meals) => {
   mealListCont.innerHTML = '';
-  meals.forEach((meal) => {
+
+  meals.forEach(async (meal) => {
     const mealElement = document.createElement('div');
     mealElement.classList.add('meal');
 
@@ -39,18 +53,37 @@ const displayMeals = (meals) => {
     const mealTitle = document.createElement('h3');
     mealTitle.textContent = meal.strMeal;
 
+    const likesContainer = document.createElement('div');
+    likesContainer.classList.add('likes-container');
+
+    const likesIcon = document.createElement('span');
+    likesIcon.classList.add('likes-icon');
+    likesIcon.textContent = '❤️';
+
+    const likesCount = document.createElement('span');
+    likesCount.classList.add('likes-count');
+
     const commentsButton = document.createElement('button');
     commentsButton.textContent = 'Comments';
     commentsButton.classList.add('commentsBtn');
 
     commentsButton.addEventListener('click', () => popupModal(meal.idMeal));
 
+    likesContainer.appendChild(likesIcon);
+    likesContainer.appendChild(likesCount);
+
     mealElement.appendChild(mealImage);
     mealElement.appendChild(mealTitle);
+    mealElement.appendChild(likesContainer);
     mealElement.appendChild(commentsButton);
 
     mealListCont.appendChild(mealElement);
+
+    const likes = await fetchLikes(meal.strMeal);
+    updateLikesCount(likesCount, likes);
   });
 };
 
-export { fetchCategoryMeals, displayMeals };
+export {
+  fetchCategoryMeals, displayMeals, sendLike, updateLikesCount,
+};
