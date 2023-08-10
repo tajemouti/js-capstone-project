@@ -22,6 +22,10 @@ const fetchLikes = async (mealName) => {
   return mealLikes ? mealLikes.likes : 0;
 };
 
+const updateLikesCount = (element, count) => {
+  element.textContent = `${count} Likes`;
+};
+
 const displayMeals = (meals) => {
   mealListCont.innerHTML = '';
   meals.forEach((meal) => {
