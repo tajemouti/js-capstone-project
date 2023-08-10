@@ -1,4 +1,4 @@
-const postComment = async (id, username, comment) => {
+const postComment = async (id, user_name, com) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PLvSR6PHFG9fyXQEPJyE/comments?item_id=${id}`;
   const resp = await fetch(url, {
     method: 'POST',
@@ -7,8 +7,8 @@ const postComment = async (id, username, comment) => {
     },
     body: JSON.stringify({
       item_id: id.toString(),
-      username,
-      comment,
+      username: user_name,
+      comment: com,
     }),
   });
   return resp.json();
