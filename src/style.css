@@ -227,3 +227,20 @@ footer p {
   padding: 12px;
   width: 100%;
 }
+
+.likes-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1em;
+}
+
+.likes-icon {
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.likes-icon:hover {
+  transform: scale(1.1);
+}
