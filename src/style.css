@@ -23,16 +23,18 @@ ul {
   align-items: center;
   gap: 3em;
   list-style: none;
-  font-size: 2em;
-  font-weight: 600;
   color: black;
 }
 
 ul a {
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 600;
   color: black;
   text-shadow: 1px 2px;
+}
+
+ul span {
+  font-size: 1em;
 }
 
 ul img {
