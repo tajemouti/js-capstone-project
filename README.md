@@ -23,7 +23,7 @@
 
 # 📖 [JavaScript Capstone Project] <a name="about-project"></a>
 
-**[JavaScript Capstone Project]** is a learning project in which it is required to implement HTML/CSS/JavaScript linters.. And build a meduim fidelity wireframe application using ES6, API and WebPack framework..
+**[JavaScript Capstone Project]** s a single-page restaurant-themed app that allows users to view a list of meals in different categories and interact with them. Users can see meal thumbnails, titles, and the number of likes for each meal. They can also like meals, and their interactions are recorded using an external API.
 
 ## 🛠 Built With <a name="built-with"></a>
 Visual Studia Code, HTML/JavaScript linters, ES6, Webpack, API.
