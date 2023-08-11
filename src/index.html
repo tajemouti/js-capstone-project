@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <header id="header">
+        <ul>
+            <img src="./logo.jpg" alt="Logo">
+            <li><a href="#" data-category="Seafood">Seafood</a><span></span></li>
+            <li><a href="#" data-category="Lamb">Lamb</a><span></span></li>
+            <li><a href="#" data-category="Chicken">Chicken</a><span></span></li>
+            <li><a href="#" data-category="Vegetarian">Vegetarian</a><span></span></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="homepage">
+            <div id="mealList"></div>
+        </section>
+
+        <section id="modal" class="modal">
+            <div id="modal_content" class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <div id="itemSection" class="itemSection"></div>
+                <div id="commentsHeading" class="commentName"></div>
+                <div id="commentSection" class="commentSection"></div>
+                <div class='addComment'>
+                    <h3 class='commentTitle'>Add Comment</h3>
+                    <input id="username" class='usernameInput' placeholder='Name'/>
+                    <textarea id='comment' rows='4' cols='50' maxlength='200' class='textarea' placeholder="Add a comment here..."></textarea>
+                    <button id="btnAddComment" type="button" class='commentsBtn'>Add Comment</button>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>
+            Created by Bilal and Ajrass under MIT license
+        </p>
+    </footer>
+</body>
+</html>
