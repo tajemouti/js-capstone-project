@@ -7,6 +7,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+    - [Presentation](#presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -58,6 +59,10 @@ Visual Studia Code, HTML/JavaScript linters, ES6, Webpack, API.
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://tajemouti.github.io/js-capstone-project/dist/)
+
+### Presentation <a name="presentation"></a>
+
+- [Presentation Link](https://drive.google.com/file/d/1-FwCiTOHKV4ZsV4Qn1ZfrypW0-0Da7RG/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
