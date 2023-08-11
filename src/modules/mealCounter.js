@@ -21,4 +21,4 @@ const updateCategoryCounts = async () => {
   });
 };
 
-export { updateCategoryCounts, countCategoryMeals};
+export { updateCategoryCounts, countCategoryMeals };

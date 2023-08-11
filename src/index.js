@@ -3,7 +3,7 @@ import './logo.jpg';
 import {
   fetchCategoryMeals, displayMeals, sendLike, updateLikesCount,
 } from './modules/render.js';
-import updateCategoryCounts from './modules/mealCounter.js';
+import { updateCategoryCounts } from './modules/mealCounter.js';
 
 const headerLinks = document.querySelectorAll('header a');
 const mealListCont = document.getElementById('mealList');
