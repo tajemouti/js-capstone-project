@@ -62,7 +62,7 @@ Visual Studia Code, HTML/JavaScript linters, ES6, Webpack, API.
 
 ### Presentation <a name="presentation"></a>
 
-- [Presentation Link](https://drive.google.com/file/d/1-FwCiTOHKV4ZsV4Qn1ZfrypW0-0Da7RG/view?usp=sharing)
+- [Presentation Link](https://drive.google.com/file/d/1c2QcuqCZrvGFSkRXu_mb_0TOkoOCpBrl/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
